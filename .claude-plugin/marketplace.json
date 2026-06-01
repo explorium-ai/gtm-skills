@@ -1,0 +1,25 @@
+{
+  "name": "explorium-public-skills",
+  "metadata": {
+    "description": "Public Claude Code skills for B2B marketing from Explorium."
+  },
+  "owner": {
+    "name": "Explorium",
+    "email": "support@explorium.ai"
+  },
+  "plugins": [
+    {
+      "name": "explorium-public-skills",
+      "source": {
+        "source": "github",
+        "repo": "explorium-ai/public-skills"
+      },
+      "description": "Run full ABM campaigns DIY: account lists, enrichment, personalized LinkedIn ads, audience management, and campaign monitoring.",
+      "homepage": "https://explorium.ai",
+      "repository": "https://github.com/explorium-ai/public-skills",
+      "license": "MIT",
+      "category": "marketing",
+      "keywords": ["abm", "linkedin-ads", "b2b", "prospecting", "figma", "creative"]
+    }
+  ]
+}
