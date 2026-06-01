@@ -1,0 +1,20 @@
+{
+  "name": "explorium-public-skills",
+  "version": "1.0.0",
+  "description": "Public Claude Code skills for B2B marketing — ABM campaigns, LinkedIn Ads, Vibe Prospecting.",
+  "author": {
+    "name": "Explorium",
+    "url": "https://explorium.ai"
+  },
+  "homepage": "https://explorium.ai",
+  "repository": "https://github.com/explorium-ai/public-skills",
+  "license": "MIT",
+  "keywords": ["marketing", "abm", "b2b", "linkedin-ads", "prospecting"],
+  "skills": "./skills/",
+  "mcpServers": {
+    "vibe-prospecting": {
+      "type": "http",
+      "url": "https://vibeprospecting.explorium.ai/mcp"
+    }
+  }
+}
