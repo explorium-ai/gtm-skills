@@ -1,6 +1,8 @@
 # Explorium Public Skills
 
-Ready-to-use Claude Code skills for B2B marketing and sales teams.
+This repository contains open-source Claude Code skills built and maintained by [Explorium](https://explorium.ai). Each skill is a ready-to-use, step-by-step playbook that Claude Code can follow to complete a real marketing or sales workflow — no agency, no custom tooling, just Claude and the tools your team already uses.
+
+Skills are free to install, use, and adapt under the MIT license.
 
 ## Available Skills
 
