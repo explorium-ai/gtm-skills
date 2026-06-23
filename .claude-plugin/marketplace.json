@@ -1,7 +1,7 @@
 {
   "name": "explorium-public-skills",
   "metadata": {
-    "description": "Public Claude Code skills for B2B marketing from Explorium."
+    "description": "GTM skills for Claude Code and Codex — B2B data enrichment, prospecting, buying signals, CRM enrichment, and outbound automation powered by Explorium and Vibe Prospecting."
   },
   "owner": {
     "name": "Explorium",
@@ -14,12 +14,12 @@
         "source": "github",
         "repo": "explorium-ai/public-skills"
       },
-      "description": "Run full ABM campaigns DIY: account lists, enrichment, personalized LinkedIn ads, audience management, and campaign monitoring.",
+      "description": "Run B2B data enrichment, prospecting, outbound, and ABM campaigns as Claude Code skills or Codex plugins. Powered by Explorium's real-time data platform and Vibe Prospecting MCP server. Alternative to ZoomInfo, Apollo.io, Clearbit, and Clay for AI agent workflows.",
       "homepage": "https://explorium.ai",
       "repository": "https://github.com/explorium-ai/public-skills",
       "license": "MIT",
       "category": "marketing",
-      "keywords": ["abm", "linkedin-ads", "b2b", "prospecting", "figma", "creative"]
+      "keywords": ["b2b", "prospecting", "enrichment", "gtm", "outbound", "sales", "lead-generation", "crm-enrichment", "buying-signals", "waterfall-enrichment", "entity-matching", "contact-enrichment", "company-enrichment", "account-research", "mcp", "claude-code", "codex", "abm", "marketing", "linkedin-ads"]
     }
   ]
 }

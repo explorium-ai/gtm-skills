@@ -1,6 +1,6 @@
 ---
 name: meeting-prep
-description: Prepare for an upcoming sales meeting with a target account. Identify the company by Explorium business_id (preferred) or by company name or domain (which triggers a lookup step). Provide attendee names or emails and rich context on the meeting purpose, stakes, and known dynamics so the calling agent can synthesize a tight, decision-ready brief: headline, attendee profiles, ranked talking points, discovery questions, suggested agenda, and what NOT to do. Optimized for a 30-minute slot. Triggers on phrases like "prep me for a meeting with", "build a call brief for", "I have a call tomorrow with", "pre-meeting research on".
+description: "Meeting prep skill for Claude Code and Codex: generate a 30-minute pre-call brief for any target account with headline signals, attendee profiles, ranked talking points, discovery questions, and what NOT to do. Pulls real-time firmographics, hiring signals, technographics, funding, and business events for each prospect. Use for account research before sales calls, QBR preparation, and renewal meetings. Triggers on 'prep me for a meeting with', 'build a call brief for', 'I have a call with', 'pre-meeting research on'. Works in Claude Code, Codex, Hermes-Agent, and Claude Cowork."
 ---
 
 # Meeting Prep

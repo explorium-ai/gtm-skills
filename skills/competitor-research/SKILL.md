@@ -1,6 +1,6 @@
 ---
 name: competitor-research
-description: Build a fact-led competitive intelligence brief on one or more rival companies. Use when the user says "competitor analysis", "size up a competitor", "compare rivals", "competitive landscape", "vendor battlecard", "rival snapshot", "track competitor moves", or asks for a side-by-side comparison of named companies with firmographics, funding, headcount, exec roster, hiring shifts, tech stack, and recent strategic moves.
+description: "Competitive intelligence skill for Claude Code and Codex: build a fact-led competitive brief or side-by-side battlecard on one or more rival companies using real-time firmographics, funding, headcount, exec roster, hiring shifts, tech stack, and recent strategic moves. Use for sales battlecards, GTM competitive analysis, and market intelligence. Triggers on 'competitor analysis', 'size up a competitor', 'compare rivals', 'competitive landscape', 'vendor battlecard', 'rival snapshot', 'track competitor moves'. Works in Claude Code, Codex, Hermes-Agent, and OpenClaw."
 ---
 
 # Competitor Research

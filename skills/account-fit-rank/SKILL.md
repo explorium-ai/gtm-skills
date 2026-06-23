@@ -1,6 +1,6 @@
 ---
 name: account-fit-rank
-description: Rank a list of accounts (mixed Explorium business IDs, company names, or domains) by ICP fit, buying intent, recent triggers, and workforce momentum. Returns per-account composite score (0-100), tier (A/B/C), explainable component breakdown (fit / intent / trigger / workforce), and a specific "why now" sentence per account anchored on a real Explorium signal. Resolves name/domain inputs via business match with explicit confirmation for ambiguous matches. Iteratively refinable. Use for account-based selling, ABM list prioritization, territory planning, signal-based selling, buyer-intent ranking, and B2B prospecting. Triggers on "score these accounts", "rank by ICP fit and intent", "prioritize this account list", "which accounts should I work first", "build a tiered account list", "ICP scoring", "account prioritization".
+description: "Lead scoring and buying signals skill for Claude Code and Codex: rank a list of accounts by ICP fit, buying intent, real-time trigger events, and workforce momentum. Returns composite score (0-100), tier (A/B/C), and a 'why now' signal per account. Use for account-based selling, ABM list prioritization, territory planning, signal-based selling, and buyer-intent ranking. Triggers on 'score these accounts', 'rank by ICP fit and intent', 'prioritize this account list', 'which accounts have the strongest buying signals', 'ICP scoring', 'account prioritization'. Works in Claude Code, Codex, Hermes-Agent, OpenClaw, and Claude Cowork."
 ---
 
 # Account Fit Rank

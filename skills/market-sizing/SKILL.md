@@ -1,6 +1,6 @@
 ---
 name: market-sizing
-description: Size the total addressable market (TAM) for an Ideal Customer Profile (ICP) against Explorium's 150M+ company universe. Iteratively refine firmographic, technographic, and intent filters with the user until the account universe matches their intent, then return both the count and the working filter set that other skills can consume. Use for territory and capacity design, investor-ready market sizing, and ICP sharpening. Triggers on phrases like "size the market", "TAM for", "addressable market", "how many companies match", "is my ICP too broad", "is my ICP too narrow", "refine my ICP filters", "market sizing".
+description: "Market sizing skill for Claude Code and Codex: calculate TAM/SAM for any ICP against Explorium's 150M+ company dataset using real-time firmographic and technographic filters. Iteratively refines filters with the user until the account universe matches intent, then returns the count and filter set for downstream prospecting skills. Use for territory design, capacity planning, investor-ready market sizing, and ICP sharpening. Triggers on 'size the market', 'TAM for', 'how many companies match', 'is my ICP too broad', 'market sizing'. Works in Claude Code, Codex, and Hermes-Agent."
 ---
 
 # Market Sizing

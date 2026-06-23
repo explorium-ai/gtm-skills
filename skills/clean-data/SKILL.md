@@ -1,6 +1,6 @@
 ---
 name: clean-data
-description: Triage, standardize, and validate a CSV, Excel, or JSON list of companies or contacts before enrichment. Profile fill rate and cardinality, normalize company names and domains, validate emails and phones, tag invalid rows non-destructively. Run before match-business or match-prospects so you do not pay to enrich noreply, disposable, or empty rows.
+description: "Data cleaning, entity matching, and deduplication skill for Claude Code and Codex: triage, standardize, and validate a CSV, Excel, or JSON list of B2B companies or contacts before enrichment. Normalizes company names and domains, validates emails and phone numbers, matches and deduplicates records, and tags invalid rows non-destructively. Run before enrichment or CRM import to avoid paying for noisy records. Use for CRM enrichment prep, company name and website matching, entity matching, and contact deduplication. Works in Claude Code, Codex, and n8n via MCP."
 ---
 
 # Clean Data

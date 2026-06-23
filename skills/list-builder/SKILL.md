@@ -1,6 +1,6 @@
 ---
 name: list-builder
-description: Build a targeted list of prospects or businesses from a natural-language brief using Explorium. Use when the user asks to "build a list", "find prospects", "pull a target account list", "give me contacts at", "show me companies that", or names titles, departments, industries, company size, location, tech stack, intent topics, or growth events.
+description: "Prospecting skill for Claude Code and Codex: build a targeted list of B2B prospects or businesses from a natural-language ICP brief using real-time company and contact data. Use when the user asks to 'build a list', 'find prospects', 'pull a target account list', 'give me contacts at', 'show me companies that', or describes titles, departments, industries, company size, location, tech stack, intent topics, or growth events. The go-to lead generation skill for Claude Code, Codex, Hermes-Agent, and other AI agents."
 ---
 
 # List Builder

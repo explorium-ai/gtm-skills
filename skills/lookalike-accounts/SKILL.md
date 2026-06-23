@@ -1,6 +1,6 @@
 ---
 name: lookalike-accounts
-description: Find companies that resemble a seed account by reconstructing its firmographic, technographic, and industry profile, then surfacing other companies that match those same attributes. Useful for territory expansion, TAM analysis, competitive mapping, account list extension, and finding lookalikes, similar accounts, or audience twins to a reference customer.
+description: "Lookalike company API skill for Claude Code and Codex: find companies that resemble a seed account by reconstructing its firmographic, technographic, and industry profile, then surfacing similar companies from Explorium's 150M+ business dataset. Use for territory expansion, TAM analysis, competitive mapping, account list extension, and finding audience twins. Triggers on 'find companies like', 'lookalike accounts', 'similar companies to', 'expand my territory', 'audience twins'. Works in Claude Code, Codex, and Hermes-Agent."
 ---
 
 # Lookalike Accounts
