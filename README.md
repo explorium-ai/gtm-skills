@@ -1,4 +1,4 @@
-# Explorium Public Skills
+# GTM Skills
 
 This repository contains open-source Claude Code skills built and maintained by [Explorium](https://explorium.ai). Each skill is a ready-to-use, step-by-step playbook that Claude Code can follow to complete a real marketing or sales workflow — no agency, no custom tooling, just Claude and the tools your team already uses.
 
