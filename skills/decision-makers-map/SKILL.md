@@ -1,6 +1,6 @@
 ---
 name: decision-makers-map
-description: Map the decision-makers and buying committee at a target account. Identifies economic buyers, champions, technical evaluators, and influencers; prioritizes who to engage first; surfaces coverage gaps and multi-thread risk. Leads with a TL;DR (top 3 to engage, biggest gap, single-thread risk), uses compact tables, and flags recently appointed leaders. Identify the account by company domain (preferred) or company name; include deal context, persona priorities, and any hypotheses to test.
+description: "Decision-makers mapping skill for Claude Code and Codex: map the buying committee at a target account — economic buyers, champions, technical evaluators, and influencers. Prioritizes who to engage first, surfaces coverage gaps and single-thread risk, and flags recently appointed leaders. Use for outbound prospecting, deal acceleration, and multi-thread selling strategies. Identify accounts by domain or company name. Works in Claude Code, Codex, Hermes-Agent, and Claude Cowork."
 ---
 
 # Decision-Makers Map

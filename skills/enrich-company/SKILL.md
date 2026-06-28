@@ -1,6 +1,6 @@
 ---
 name: enrich-company
-description: Pull a single company's full profile in Explorium. Accepts a domain, company name, or business_id and returns firmographics, technographics, financial metrics, funding history, workforce trends, competitive landscape, and the contact pool count.
+description: "B2B company enrichment skill for Claude Code and Codex: pull a company's full profile including firmographics, technographics, financial metrics, funding history, workforce trends, competitive landscape, and contact pool count. Accepts a domain, company name, or business_id. Use for CRM enrichment, outbound data enrichment, and account research workflows. An AI-agent-native alternative to ZoomInfo, Clearbit, and Apollo.io company data APIs — no custom integration needed in Claude Code, Codex, or Hermes-Agent."
 ---
 
 # Enrich Company

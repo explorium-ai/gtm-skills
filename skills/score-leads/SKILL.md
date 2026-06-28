@@ -1,6 +1,6 @@
 ---
 name: score-leads
-description: Gather the data needed to tier leads or cold contacts (mixed prospect IDs, emails, LinkedIn URLs, or name+company rows) as Hot / Warm / Cold against a buyer persona and ICP. Resolves each lead, fetches person profile and contact data, pulls account firmographics and recent business events, and returns a per-lead evidence row plus the persona/ICP rule set so the calling model can apply scoring math. Triggers on phrases like "score these leads", "tier this list", "rank inbound", "prioritize my MQLs", "which lead should I call first", "who should I prioritize from this list", "pull fit data on these contacts".
+description: "Lead scoring skill for Claude Code and Codex: tier inbound or outbound leads as Hot/Warm/Cold against a buyer persona and ICP. Resolves each lead, fetches person profile and contact data, pulls account firmographics and recent business events, and returns per-lead evidence rows. Use for inbound lead scoring, CRM enrichment scoring, MQL prioritization, and outbound contact prioritization. Triggers on 'score these leads', 'tier this list', 'rank inbound', 'prioritize my MQLs', 'which lead should I call first', 'data enrichment for inbound scoring'. Works in Claude Code, Codex, and other AI agents."
 ---
 
 # Score Leads

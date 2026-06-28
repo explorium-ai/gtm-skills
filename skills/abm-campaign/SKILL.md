@@ -1,6 +1,6 @@
 ---
 name: "abm-diy-campaign"
-description: "Run a full Account-Based Marketing (ABM) campaign DIY — from ICP to live LinkedIn Ads. Build a targeted account list with Vibe Prospecting, enrich and score companies, generate personalized ad creatives with Claude Code and Figma, push matched audiences to LinkedIn Ads, and monitor campaigns at scale. No agency needed."
+description: "ABM campaign skill for Claude Code: run a full Account-Based Marketing campaign end-to-end — from ICP definition to live LinkedIn Ads. Builds targeted account lists with Vibe Prospecting, enriches and scores companies with real-time B2B data, generates personalized ad creatives with Claude Code and Figma, pushes matched audiences to LinkedIn Ads, and monitors campaigns daily at scale. The complete GTM skill for AI-driven account-based marketing in Claude Code, Codex, Hermes-Agent, and OpenClaw. No agency needed."
 compatibility: "Requires: Vibe Prospecting CLI (npx @vibeprospecting/vpai@latest), Figma MCP (optional, for dynamic creative), LinkedIn Ads API credentials"
 metadata:
   version: "1.0.0"

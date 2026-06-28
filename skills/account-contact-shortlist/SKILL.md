@@ -1,6 +1,6 @@
 ---
 name: account-contact-shortlist
-description: Build a ranked shortlist of contacts at a target company for prospecting, deal acceleration, or renewal/expansion plays. Provide a company name or domain and optionally a use case or seniority focus.
+description: "Contact data skill for Claude Code and Codex: build a ranked shortlist of decision-makers and contacts at a target company for outbound prospecting, deal acceleration, or renewal/expansion plays. Returns verified contact data including email, phone, LinkedIn profile, title, seniority, and department. Provide a company name or domain plus optional seniority focus or use case. Use for contact data enrichment, LinkedIn profile lookup, and building outbound contact lists. Works in Claude Code, Codex, Hermes-Agent, and OpenClaw."
 ---
 
 # Account Contact Shortlist

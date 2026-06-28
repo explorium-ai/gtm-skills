@@ -1,6 +1,6 @@
 ---
 name: enrich-contact
-description: Look up a single person's full professional profile in Explorium. Provide an email, a name plus company, a LinkedIn URL, or a known prospect_id. Returns title, seniority, department, work email, phone, company firmographics, and the linkable prospect_id for downstream workflows.
+description: "Contact enrichment skill for Claude Code and Codex: look up a B2B prospect's full professional profile including work email, phone number, LinkedIn profile, title, seniority, department, and company firmographics. Provide an email, name + company, LinkedIn URL, or prospect_id. Use for contact data enrichment, email lookup, LinkedIn profile lookup, and outbound contact data workflows in Claude Code, Codex, Hermes-Agent, and other AI agents."
 ---
 
 # Enrich Contact

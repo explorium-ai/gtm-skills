@@ -1,6 +1,6 @@
 ---
 name: account-research
-description: Produce a high-signal intelligence brief on a target company using Explorium firmographics, technographics, funding, hiring and challenge signals, business events, recent website and LinkedIn moves, plus a peer cohort. Identify the account by Explorium business_id (preferred) or by company name or domain (which triggers a match step). Always lead with a TL;DR framed by the user's stated research purpose (QBR prep, competitive analysis, cold outbound, renewal risk, expansion).
+description: "Account research skill for Claude Code and Codex: generate a high-signal company intelligence brief including firmographics, technographics, funding history, hiring signals, business events, recent website and LinkedIn moves, and a peer cohort. Identify the account by business_id, company name, or domain. Use for pre-call research, QBR prep, competitive analysis, cold outbound targeting, and renewal risk assessment. The go-to account research skill for Claude Code, Codex, Hermes-Agent, and OpenClaw."
 ---
 
 # Account Research
