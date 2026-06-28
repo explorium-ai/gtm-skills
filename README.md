@@ -1,6 +1,6 @@
 # GTM Skills for Claude Code, Codex & AI Agents
 
-> Open-source B2B data enrichment, prospecting, and outbound skills for **Claude Code**, **Codex**, **Hermes-Agent**, **OpenClaw**, and **Claude Cowork** — powered by [Explorium](https://explorium.ai) and [Vibe Prospecting](https://vibeprospecting.ai).
+> Open-source B2B data enrichment, prospecting, and outbound skills for **Claude Code**, **Codex**, **Hermes-Agent**, **OpenClaw**, and **Claude Cowork** — powered by [Vibe Prospecting](https://vibeprospecting.ai).
 
 These skills are ready-to-use playbooks that let any AI coding assistant run real GTM workflows: use as a **prospecting skill** to build prospect lists, an **enrichment skill** to enrich company and contact data, a **lead scoring skill** to tier leads, or a complete **outbound skill** for cold email and ABM campaigns — without custom tooling or agencies.
 
@@ -27,7 +27,7 @@ claude install explorium-ai/gtm-skills
 | [`personalize-email`](skills/personalize-email/SKILL.md) | Assemble signal packs for personalized cold email outreach | cold email, outbound, personalization, lead gen |
 | [`competitor-research`](skills/competitor-research/SKILL.md) | Competitive intelligence briefs and side-by-side battlecards | competitor research, battlecard, competitive intelligence |
 | [`lookalike-accounts`](skills/lookalike-accounts/SKILL.md) | Find similar companies for territory expansion or TAM analysis | lookalike company, similar accounts, audience twins |
-| [`market-sizing`](skills/market-sizing/SKILL.md) | Size TAM/SAM for any ICP against Explorium's 150M+ company dataset | market sizing, TAM, ICP filters |
+| [`market-sizing`](skills/market-sizing/SKILL.md) | Size TAM/SAM for any ICP against a 150M+ company dataset | market sizing, TAM, ICP filters |
 | [`meeting-prep`](skills/meeting-prep/SKILL.md) | 30-minute call briefs with prospect intelligence & talking points | meeting prep, call brief, account research |
 | [`clean-data`](skills/clean-data/SKILL.md) | Validate, deduplicate & entity-match B2B company and contact records | data cleaning, entity matching, deduplication, CRM enrichment |
 | [`abm-campaign`](skills/abm-campaign/SKILL.md) | End-to-end ABM: ICP → enrichment → LinkedIn Ads → monitoring | ABM campaign, account-based marketing, LinkedIn Ads |
@@ -36,11 +36,11 @@ claude install explorium-ai/gtm-skills
 
 ## Why Use These GTM Skills?
 
-**B2B data enrichment for AI agents.** Every skill is built on the Vibe Prospecting MCP server — real-time access to Explorium's 150M+ company database directly inside your Claude Code, Codex, or Hermes-Agent workflow. No polling, no CSV exports, no stitching together REST calls.
+**B2B data enrichment for AI agents.** Every skill is built on the Vibe Prospecting MCP server — real-time access to a 150M+ company database directly inside your Claude Code, Codex, or Hermes-Agent workflow. No polling, no CSV exports, no stitching together REST calls.
 
 **Buying signals & intent data.** Surface companies and contacts that are actively in-market. Skills like `account-fit-rank` and `score-leads` combine firmographic fit with behavioral intent signals and recent trigger events (funding, hiring surges, leadership changes, product launches).
 
-**Waterfall enrichment.** `enrich-company` and `enrich-contact` use Explorium's waterfall enrichment pipeline to maximize fill rate across email, phone, LinkedIn, technographics, and firmographics — a single skill call instead of chaining multiple data provider APIs.
+**Waterfall enrichment.** `enrich-company` and `enrich-contact` use a waterfall enrichment pipeline to maximize fill rate across email, phone, LinkedIn, technographics, and firmographics — a single skill call instead of chaining multiple data provider APIs.
 
 **Entity matching & deduplication.** `clean-data` resolves messy company names, partial domains, and duplicate contact rows before you pay to enrich them — critical for CRM enrichment workflows and inbound lead scoring.
 
@@ -121,7 +121,7 @@ Use `personalize-email` to assemble intent-led signal packs for each prospect �
 
 ## MCP Integration
 
-The Vibe Prospecting MCP server is the data layer powering every skill in this repo. It exposes Explorium's real-time B2B data platform — 150M+ companies, 700M+ contacts, firmographics, technographics, funding, workforce signals, intent data, and buying triggers — as a native MCP tool for AI agent workflows.
+The Vibe Prospecting MCP server is the data layer powering every skill in this repo. It exposes a real-time B2B data platform — 150M+ companies, 700M+ contacts, firmographics, technographics, funding, workforce signals, intent data, and buying triggers — as a native MCP tool for AI agent workflows.
 
 **MCP server URL:** `https://vibeprospecting.explorium.ai/mcp`
 
@@ -140,11 +140,11 @@ Use this MCP server directly in Claude Code, Codex, Hermes-Agent, OpenClaw, or a
 
 ---
 
-## Explorium vs. Other B2B Data Providers
+## Vibe Prospecting vs. Other B2B Data Providers
 
-These skills use Explorium's data platform and Vibe Prospecting MCP as the B2B data layer. Here's how that compares to other providers when building AI agent workflows:
+These skills use the Vibe Prospecting MCP as the B2B data layer. Here's how that compares to other providers when building AI agent workflows:
 
-| | **Explorium / Vibe Prospecting** | ZoomInfo | Apollo.io | Clay | Clearbit | Cognism |
+| | **Vibe Prospecting** | ZoomInfo | Apollo.io | Clay | Clearbit | Cognism |
 |---|---|---|---|---|---|---|
 | Native Claude Code skill | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | Codex plugin | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
@@ -186,4 +186,4 @@ For Codex, Hermes-Agent, OpenClaw, or Claude Cowork: add as a plugin from `https
 
 ## Maintained by
 
-[Explorium](https://explorium.ai) · [Vibe Prospecting](https://vibeprospecting.ai)
+[Vibe Prospecting](https://vibeprospecting.ai)
