@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #1f2a37;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Thin, unobtrusive scrollbars to match the dense data UI */
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #c7d0d9;
+  border-radius: 6px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #aab6c2;
+}
+
+@layer components {
+  .zi-input {
+    @apply w-full rounded-md border border-line bg-white px-3 py-2 text-sm text-ink
+      placeholder:text-muted/70 outline-none transition
+      focus:border-navy-600 focus:ring-2 focus:ring-navy-600/15;
+  }
+  .zi-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2 text-sm font-semibold transition;
+  }
+  .zi-btn-primary {
+    @apply zi-btn bg-navy text-white hover:bg-navy-900 active:bg-navy-900;
+  }
+  .zi-btn-coral {
+    @apply zi-btn bg-coral text-white hover:bg-coral-600 active:bg-coral-600 shadow-sm;
+  }
+  .zi-btn-ghost {
+    @apply zi-btn border border-line bg-white text-ink hover:bg-panel;
+  }
+  .zi-chip {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-navy-50 px-2.5 py-1
+      text-xs font-medium text-navy-700 border border-navy-600/15;
+  }
+}
+
+@keyframes zi-slide-in {
+  from { transform: translateX(16px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.zi-slide-in { animation: zi-slide-in 0.18s ease-out; }
+
+@keyframes zi-shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.zi-skeleton {
+  background: linear-gradient(90deg, #eef1f4 25%, #e3e8ee 37%, #eef1f4 63%);
+  background-size: 800px 100%;
+  animation: zi-shimmer 1.3s infinite linear;
+}

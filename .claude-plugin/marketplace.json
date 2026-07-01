@@ -19,7 +19,7 @@
       "repository": "https://github.com/explorium-ai/public-skills",
       "license": "MIT",
       "category": "marketing",
-      "keywords": ["b2b", "prospecting", "enrichment", "gtm", "outbound", "sales", "lead-generation", "crm-enrichment", "buying-signals", "waterfall-enrichment", "entity-matching", "contact-enrichment", "company-enrichment", "account-research", "mcp", "claude-code", "codex", "abm", "marketing", "linkedin-ads"]
+      "keywords": ["b2b", "prospecting", "enrichment", "gtm", "outbound", "sales", "lead-generation", "lead-gen-tool", "crm-enrichment", "buying-signals", "waterfall-enrichment", "entity-matching", "contact-enrichment", "company-enrichment", "account-research", "mcp", "claude-code", "codex", "abm", "marketing", "linkedin-ads", "zoominfo-alternative"]
     }
   ]
 }

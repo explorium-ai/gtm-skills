@@ -16,6 +16,7 @@ claude install explorium-ai/gtm-skills
 
 | Skill | Use case | Triggers |
 |---|---|---|
+| [`lead-gen-tool-builder`](skills/lead-gen-tool-builder/SKILL.md) | Scaffold a self-hostable, ZoomInfo-style lead-gen web app — search UI + CRM push | lead generation tool, build a lead gen tool, lead gen tool skill, prospecting app, ZoomInfo alternative |
 | [`list-builder`](skills/list-builder/SKILL.md) | Build targeted B2B prospect lists from a natural-language ICP brief | prospecting, lead gen, find companies, build a list |
 | [`enrich-company`](skills/enrich-company/SKILL.md) | Add firmographics, technographics, funding & workforce signals to any company | B2B data enrichment, company enrichment, firmographics API |
 | [`enrich-contact`](skills/enrich-contact/SKILL.md) | Look up email, phone & LinkedIn profile for any B2B prospect | contact enrichment, email lookup, LinkedIn profile lookup |
@@ -36,7 +37,9 @@ claude install explorium-ai/gtm-skills
 
 ## Why Use These GTM Skills?
 
-**B2B data enrichment for AI agents.** Every skill is built on the Vibe Prospecting MCP server — real-time access to Explorium's 150M+ company database directly inside your Claude Code, Codex, or Hermes-Agent workflow. No polling, no CSV exports, no stitching together REST calls.
+**B2B data enrichment for AI agents.** Most skills are built on the Vibe Prospecting MCP server — real-time access to Explorium's 150M+ company database directly inside your Claude Code, Codex, or Hermes-Agent workflow. No polling, no CSV exports, no stitching together REST calls.
+
+**Scaffold a real app, not just a list.** `lead-gen-tool-builder` is different from the workflow skills above: instead of running a prospecting task in your current session, it generates a standalone, self-hostable lead-gen web app — company & contact search, filters, CRM push — powered directly by the Explorium API, ready to deploy or hand to your team.
 
 **Buying signals & intent data.** Surface companies and contacts that are actively in-market. Skills like `account-fit-rank` and `score-leads` combine firmographic fit with behavioral intent signals and recent trigger events (funding, hiring surges, leadership changes, product launches).
 
@@ -71,6 +74,22 @@ Use `list-builder` to turn a natural-language ICP description into a filtered li
 /list-builder Find 50 Series B SaaS companies in the US with 50-200 employees using Salesforce
 /lookalike-accounts Find companies similar to Notion and Figma for my AE territory
 /account-fit-rank Score this account list by ICP fit and buying intent
+```
+
+### Build Your Own Lead Gen Tool
+
+Want a lead-gen tool your whole team can use, not just a one-off list? Use
+`lead-gen-tool-builder` to scaffold a complete, self-hostable, ZoomInfo-style
+web app — company & contact search, firmographic and technographic filters, a
+sortable results table, CSV import/export, and one-click push to HubSpot and
+Salesforce — powered by the Explorium API. It's the fastest way to build a lead
+generation tool, a self-hosted ZoomInfo or Apollo.io alternative, or an
+internal prospecting app without hiring an agency or writing the data-layer
+integration by hand.
+
+```
+/lead-gen-tool-builder Build me a lead gen tool with Explorium search and HubSpot push
+/lead-gen-tool-builder Scaffold a ZoomInfo-style prospecting app I can self-host for my team
 ```
 
 ### Outbound & Cold Email
