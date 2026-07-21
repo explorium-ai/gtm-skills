@@ -1,0 +1,24 @@
+:root {
+  --leadfinder-primary: #4f46e5;
+  --leadfinder-primary-dark: #3730a3;
+  --leadfinder-primary-tint: #eef0fd;
+  --leadfinder-primary-tint-2: #dfe1fb;
+  --leadfinder-ink: #14161a;
+  --leadfinder-ink-muted: #6b7080;
+  --leadfinder-green: #16a34a;
+  --leadfinder-green-tint: #e7f8ee;
+  --leadfinder-red: #dc2626;
+  --leadfinder-text: #14161a;
+  --leadfinder-text-muted: #6b7080;
+  --leadfinder-border: #e3e5ee;
+  --leadfinder-white: #ffffff;
+
+  --leadfinder-radius-sm: 8px;
+  --leadfinder-radius: 14px;
+  --leadfinder-radius-lg: 20px;
+
+  --leadfinder-shadow-sm: 0 2px 8px rgba(20, 22, 26, 0.1);
+  --leadfinder-shadow: 0 12px 32px rgba(79, 70, 229, 0.22);
+
+  --leadfinder-font: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lead Finder — Settings</title>
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <style>
+      body {
+        margin: 0;
+        background: var(--leadfinder-primary-tint);
+        font-family: var(--leadfinder-font);
+        color: var(--leadfinder-text);
+      }
+      .leadfinder-options-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px 32px;
+        background: var(--leadfinder-ink);
+        color: var(--leadfinder-white);
+      }
+      .leadfinder-options-header img {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+      }
+      .leadfinder-options-header h1 {
+        font-size: 18px;
+        margin: 0;
+      }
+      .leadfinder-card {
+        max-width: 480px;
+        margin: 32px auto;
+        background: var(--leadfinder-white);
+        border-radius: var(--leadfinder-radius-lg);
+        box-shadow: var(--leadfinder-shadow-sm);
+        border: 1px solid var(--leadfinder-border);
+        padding: 24px 28px;
+      }
+      .leadfinder-field-group { margin-bottom: 20px; }
+      .leadfinder-field-group label {
+        display: block;
+        font-weight: 700;
+        font-size: 13px;
+        margin-bottom: 4px;
+      }
+      .leadfinder-field-group p {
+        font-size: 12px;
+        color: var(--leadfinder-text-muted);
+        margin: 0 0 8px 0;
+      }
+      .leadfinder-field-group input {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: var(--leadfinder-radius-sm);
+        border: 1.5px solid var(--leadfinder-border);
+        font-size: 13px;
+        font-family: var(--leadfinder-font);
+      }
+      .leadfinder-field-group input:focus {
+        outline: none;
+        border-color: var(--leadfinder-ink);
+      }
+      #save-btn {
+        width: 100%;
+        border: none;
+        border-radius: 999px;
+        padding: 11px 16px;
+        background: var(--leadfinder-primary);
+        color: var(--leadfinder-ink);
+        font-weight: 700;
+        font-size: 14px;
+        cursor: pointer;
+        font-family: var(--leadfinder-font);
+      }
+      #save-btn:hover { filter: brightness(1.05); }
+      #save-status {
+        margin-top: 10px;
+        font-size: 12px;
+        color: var(--leadfinder-green);
+        text-align: center;
+        min-height: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="leadfinder-options-header">
+      <img src="icons/icon32.png" alt="Lead Finder" />
+      <h1>Lead Finder Settings</h1>
+    </div>
+    <div class="leadfinder-card">
+      <div class="leadfinder-field-group">
+        <label for="explorium-key">Explorium API Key</label>
+        <p>Used to reveal verified email &amp; phone for LinkedIn profiles.</p>
+        <input id="explorium-key" type="password" autocomplete="off" placeholder="Paste your Explorium API key" />
+      </div>
+      <div class="leadfinder-field-group">
+        <label for="hubspot-token">HubSpot Private App Token</label>
+        <p>From HubSpot &rarr; Settings &rarr; Integrations &rarr; Private Apps. Used to push contacts.</p>
+        <input id="hubspot-token" type="password" autocomplete="off" placeholder="Paste your HubSpot private-app token" />
+      </div>
+      <button id="save-btn">Save</button>
+      <div id="save-status"></div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>
