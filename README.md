@@ -17,6 +17,7 @@ claude install explorium-ai/gtm-skills
 | Skill | Use case | Triggers |
 |---|---|---|
 | [`lead-gen-tool-builder`](skills/lead-gen-tool-builder/SKILL.md) | Scaffold a self-hostable, ZoomInfo-style lead-gen web app — search UI + CRM push | lead generation tool, build a lead gen tool, lead gen tool skill, prospecting app, ZoomInfo alternative |
+| [`browser-extension-builder`](skills/browser-extension-builder/SKILL.md) | Scaffold a local Chrome extension that reveals LinkedIn contact info and pushes to HubSpot | Chrome extension, browser extension, Lusha alternative, Apollo.io extension clone, LinkedIn contact finder |
 | [`list-builder`](skills/list-builder/SKILL.md) | Build targeted B2B prospect lists from a natural-language ICP brief | prospecting, lead gen, find companies, build a list |
 | [`enrich-company`](skills/enrich-company/SKILL.md) | Add firmographics, technographics, funding & workforce signals to any company | B2B data enrichment, company enrichment, firmographics API |
 | [`enrich-contact`](skills/enrich-contact/SKILL.md) | Look up email, phone & LinkedIn profile for any B2B prospect | contact enrichment, email lookup, LinkedIn profile lookup |
@@ -40,6 +41,8 @@ claude install explorium-ai/gtm-skills
 **B2B data enrichment for AI agents.** Most skills are built on the Vibe Prospecting MCP server — real-time access to Explorium's 150M+ company database directly inside your Claude Code, Codex, or Hermes-Agent workflow. No polling, no CSV exports, no stitching together REST calls.
 
 **Scaffold a real app, not just a list.** `lead-gen-tool-builder` is different from the workflow skills above: instead of running a prospecting task in your current session, it generates a standalone, self-hostable lead-gen web app — company & contact search, filters, CRM push — powered directly by the Explorium API, ready to deploy or hand to your team.
+
+**Or scaffold a browser extension.** `browser-extension-builder` produces a local Chrome extension in the same spirit — it reveals verified contact info right on a LinkedIn profile and pushes to HubSpot, a self-hosted alternative to Lusha or Apollo.io's extension that you load unpacked and point at your own Explorium key.
 
 **Buying signals & intent data.** Surface companies and contacts that are actively in-market. Skills like `account-fit-rank` and `score-leads` combine firmographic fit with behavioral intent signals and recent trigger events (funding, hiring surges, leadership changes, product launches).
 
@@ -90,6 +93,22 @@ integration by hand.
 ```
 /lead-gen-tool-builder Build me a lead gen tool with Explorium search and HubSpot push
 /lead-gen-tool-builder Scaffold a ZoomInfo-style prospecting app I can self-host for my team
+```
+
+### Build Your Own Browser Extension
+
+Want the Lusha/Apollo.io experience — reveal a contact right on their LinkedIn
+profile — without the per-seat license? Use `browser-extension-builder` to
+scaffold a local Chrome extension that detects any LinkedIn profile, reveals a
+verified email/phone/job title via Explorium, and pushes the contact to
+HubSpot (with an editable field-mapping review) or drafts a Gmail message.
+It's a vanilla Manifest V3 extension — no build step, no framework — loaded
+via `chrome://extensions` → **Load unpacked**, so it's easy to restyle to
+match any brand's design system on request.
+
+```
+/browser-extension-builder Build me a Lusha-style Chrome extension powered by Explorium
+/browser-extension-builder Clone the Apollo.io extension but push to HubSpot with my own key
 ```
 
 ### Outbound & Cold Email

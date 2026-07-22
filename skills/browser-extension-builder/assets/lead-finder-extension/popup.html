@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <style>
+      body {
+        width: 260px;
+        margin: 0;
+        font-family: var(--leadfinder-font);
+        color: var(--leadfinder-text);
+        background: var(--leadfinder-white);
+      }
+      .leadfinder-popup-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 16px;
+        background: var(--leadfinder-ink);
+        color: var(--leadfinder-white);
+      }
+      .leadfinder-popup-header img {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+      }
+      .leadfinder-popup-header span {
+        font-weight: 700;
+        font-size: 15px;
+      }
+      .leadfinder-popup-body {
+        padding: 16px;
+        font-size: 13px;
+        color: var(--leadfinder-text-muted);
+        line-height: 1.5;
+      }
+      a.leadfinder-options-link {
+        display: block;
+        margin-top: 12px;
+        text-align: center;
+        background: var(--leadfinder-primary);
+        color: var(--leadfinder-ink);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 9px 0;
+        border-radius: 999px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="leadfinder-popup-header">
+      <img src="icons/icon32.png" alt="Lead Finder" />
+      <span>Lead Finder</span>
+    </div>
+    <div class="leadfinder-popup-body">
+      Open any LinkedIn profile to reveal verified contact info, push it to
+      HubSpot, or draft an email — powered by Explorium.
+      <a class="leadfinder-options-link" href="options.html" target="_blank">Set API keys</a>
+    </div>
+  </body>
+</html>
