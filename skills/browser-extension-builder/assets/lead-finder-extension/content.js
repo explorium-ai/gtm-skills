@@ -90,7 +90,7 @@
       </div>
       <div class="leadfinder-body">
         <div class="leadfinder-profile-row">
-          <img class="leadfinder-avatar" src="${photo || ICON_URL}" alt="" />
+          <img class="leadfinder-avatar" alt="" />
           <div>
             <p class="leadfinder-name">${escapeHtml(name) || "This profile"}</p>
             <p class="leadfinder-subtitle">${escapeHtml(headline)}</p>
@@ -101,6 +101,7 @@
     `;
     document.body.appendChild(panel);
 
+    panel.querySelector(".leadfinder-avatar").src = photo || ICON_URL;
     panel.querySelector(".leadfinder-close").addEventListener("click", removePanel);
 
     renderRevealState();
