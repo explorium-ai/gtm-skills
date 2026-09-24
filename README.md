@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="GTM Skills by Explorium — prospecting, enrichment and outbound on autopilot" width="100%">
+</p>
+
 # GTM Skills for Claude Code, Codex, Grok & AI Agents
 
 > Open-source B2B data enrichment, prospecting, and outbound skills for **Claude Code**, **Codex**, **Grok Build**, **Grok Bot**, **Hermes-Agent**, **OpenClaw**, and **Claude Cowork** — powered by [Explorium](https://explorium.ai) and [Vibe Prospecting](https://vibeprospecting.ai).
