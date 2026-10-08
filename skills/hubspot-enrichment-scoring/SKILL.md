@@ -1,3 +1,8 @@
+---
+name: hubspot-enrichment-scoring
+description: "HubSpot CRM enrichment and lead scoring skill for Claude Code and Codex: pull companies from HubSpot, match and enrich them via Vibe Prospecting with firmographics, tech stack, funding history, and intent signals, compute an ICP fit score (0-100) and A/B/C tier, and write everything back to HubSpot as custom properties. Use for CRM enrichment, account scoring, and segmentation prep. Triggers on 'enrich my HubSpot', 'score my HubSpot companies', 'CRM enrichment', 'write ICP scores to HubSpot'. Works in Claude Code, Codex, Grok, and Claude Cowork."
+compatibility: "Requires: Vibe Prospecting CLI (npx @vibeprospecting/vpai@latest) or connector, HubSpot Private App token with crm.objects.companies.read/write scopes"
+---
 
 # HubSpot Enrichment & Scoring
 

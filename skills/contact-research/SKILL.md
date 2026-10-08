@@ -1,3 +1,9 @@
+---
+name: contact-research
+description: "Contact research skill for Claude Code and Codex: given a list of people, match and enrich each one with Vibe Prospecting — verified work email, LinkedIn, direct phone, current role, work history, seniority, and recent job changes — then write a 4-6 sentence professional synopsis per person. Use for pre-call research, account intelligence, founder diligence, recruiting, and conference prep. Triggers on 'research these people', 'profile this contact list', 'who are these attendees', 'background on these prospects'. Works in Claude Code, Codex, Grok, and Claude Cowork."
+compatibility: "Requires: Vibe Prospecting CLI (npx @vibeprospecting/vpai@latest) or connector"
+---
+
 # Contact Research — Vibe Prospecting Deep Profile
 
 Given a list of people, match and enrich each one with Vibe Prospecting, then have Claude write a professional synopsis — who they are, what they do, their career trajectory, and what's relevant to know before engaging with them.
