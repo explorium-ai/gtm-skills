@@ -1,0 +1,18 @@
+{
+  "name": "explorium-public-skills",
+  "version": "1.0.0",
+  "description": "GTM skills for Cursor, Claude Code, Codex, and AI agents — B2B data enrichment, prospecting, buying signals, CRM enrichment, and outbound automation powered by Explorium and Vibe Prospecting.",
+  "author": {
+    "name": "Explorium",
+    "email": "support@explorium.ai"
+  },
+  "homepage": "https://explorium.ai",
+  "repository": "https://github.com/explorium-ai/gtm-skills",
+  "license": "MIT",
+  "keywords": ["b2b", "prospecting", "enrichment", "gtm", "outbound", "sales", "lead-generation", "crm-enrichment", "buying-signals", "account-research", "mcp", "cursor", "abm"],
+  "mcpServers": {
+    "vibe-prospecting": {
+      "url": "https://vibeprospecting.explorium.ai/mcp"
+    }
+  }
+}

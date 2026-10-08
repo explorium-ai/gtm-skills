@@ -22,6 +22,17 @@ Thank you for your interest in Explorium's public skills.
 4. Open a pull request referencing the issue.
 5. All PRs require approval from a maintainer before merging. Do not expect auto-merge.
 
+## Skill format rules
+
+These skills ship to Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, Grok, OpenCode and dozens of other agents from the same `skills/` folder. To keep every agent able to load them, each skill must follow the [Agent Skills spec](https://agentskills.io/specification):
+
+- One folder per skill under `skills/`, with the instructions in a file named exactly `SKILL.md`
+- YAML frontmatter with `name` and `description`
+- `name` matches the folder name: lowercase letters, numbers and single hyphens, max 64 characters
+- `description` is at most 1024 characters; `compatibility`, if present, at most 500
+
+CI runs `.github/scripts/validate_skills.py` on every pull request to check these rules and the plugin manifests.
+
 ## Code of conduct
 
 Be respectful. Contributions that are disrespectful, off-topic, or that attempt to introduce malicious content will be closed without discussion.
