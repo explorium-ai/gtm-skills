@@ -1,0 +1,10 @@
+{
+  "name": "explorium-public-skills",
+  "version": "1.0.0",
+  "description": "GTM skills for Gemini CLI — B2B data enrichment, prospecting, buying signals, CRM enrichment, and outbound automation powered by Explorium and Vibe Prospecting.",
+  "mcpServers": {
+    "vibe-prospecting": {
+      "httpUrl": "https://vibeprospecting.explorium.ai/mcp"
+    }
+  }
+}

@@ -10,13 +10,10 @@
   "plugins": [
     {
       "name": "explorium-public-skills",
-      "source": {
-        "source": "github",
-        "repo": "explorium-ai/public-skills"
-      },
+      "source": "./",
       "description": "Run B2B data enrichment, prospecting, outbound, and ABM campaigns as Claude Code skills or Codex plugins. Powered by Explorium's real-time data platform and Vibe Prospecting MCP server. Alternative to ZoomInfo, Apollo.io, Clearbit, and Clay for AI agent workflows.",
       "homepage": "https://explorium.ai",
-      "repository": "https://github.com/explorium-ai/public-skills",
+      "repository": "https://github.com/explorium-ai/gtm-skills",
       "license": "MIT",
       "category": "marketing",
       "keywords": ["b2b", "prospecting", "enrichment", "gtm", "outbound", "sales", "lead-generation", "lead-gen-tool", "crm-enrichment", "buying-signals", "waterfall-enrichment", "entity-matching", "contact-enrichment", "company-enrichment", "account-research", "mcp", "claude-code", "codex", "abm", "marketing", "linkedin-ads", "zoominfo-alternative"]

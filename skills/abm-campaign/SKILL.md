@@ -1,5 +1,5 @@
 ---
-name: "abm-diy-campaign"
+name: abm-campaign
 description: "ABM campaign skill for Claude Code: run a full Account-Based Marketing campaign end-to-end — from ICP definition to live LinkedIn Ads. Builds targeted account lists with Vibe Prospecting, enriches and scores companies with real-time B2B data, generates personalized ad creatives with Claude Code and Figma, pushes matched audiences to LinkedIn Ads, and monitors campaigns daily at scale. The complete GTM skill for AI-driven account-based marketing in Claude Code, Codex, Hermes-Agent, and OpenClaw. No agency needed."
 compatibility: "Requires: Vibe Prospecting CLI (npx @vibeprospecting/vpai@latest), Figma MCP (optional, for dynamic creative), LinkedIn Ads API credentials"
 metadata:

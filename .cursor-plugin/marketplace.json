@@ -1,0 +1,17 @@
+{
+  "name": "explorium-public-skills",
+  "owner": {
+    "name": "Explorium",
+    "email": "support@explorium.ai"
+  },
+  "metadata": {
+    "description": "GTM skills for Cursor — B2B data enrichment, prospecting, buying signals, CRM enrichment, and outbound automation powered by Explorium and Vibe Prospecting."
+  },
+  "plugins": [
+    {
+      "name": "explorium-public-skills",
+      "source": "./",
+      "description": "B2B data enrichment, prospecting, outbound, and ABM skills powered by Explorium's real-time data platform and the Vibe Prospecting MCP server."
+    }
+  ]
+}

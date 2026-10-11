@@ -1,3 +1,9 @@
+---
+name: cold-email-lemlist
+description: "Cold email skill for Claude Code and Codex: build a targeted B2B prospect list with Vibe Prospecting, enrich it with firmographics and verified work emails, write a personalized icebreaker and email per prospect from their real company data, and push every lead into a live Lemlist campaign with personalization variables pre-filled. Use for cold outbound, email personalization at scale, and Lemlist campaign setup. Triggers on 'cold email campaign', 'push leads to Lemlist', 'write personalized outbound emails', 'build a Lemlist sequence'. Works in Claude Code, Codex, Grok, and Claude Cowork."
+compatibility: "Requires: Vibe Prospecting CLI (npx @vibeprospecting/vpai@latest) or connector, Lemlist API key"
+---
+
 # Cold Email — Vibe Prospecting + Lemlist
 
 Build a targeted prospect list, enrich it with firmographic and contact data, have Claude write personalized emails for each prospect, and push everything to a live Lemlist campaign — ready to send.

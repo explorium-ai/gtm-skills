@@ -2,17 +2,24 @@
   <img src="assets/banner.png" alt="GTM Skills by Explorium — prospecting, enrichment and outbound on autopilot" width="100%">
 </p>
 
-# GTM Skills for Claude Code, Codex, Grok & AI Agents
+# GTM Skills for Claude Code, Codex, Cursor, Gemini, Grok & AI Agents
 
-> Open-source B2B data enrichment, prospecting, and outbound skills for **Claude Code**, **Codex**, **Grok Build**, **Grok Bot**, **Hermes-Agent**, **OpenClaw**, and **Claude Cowork** — powered by [Explorium](https://explorium.ai) and [Vibe Prospecting](https://vibeprospecting.ai).
+> Open-source B2B data enrichment, prospecting, and outbound skills for **Claude Code**, **Codex**, **Cursor**, **Gemini CLI**, **GitHub Copilot**, **Grok**, **OpenCode**, **Windsurf**, **Hermes-Agent**, **OpenClaw**, **Claude Cowork**, and 60+ other agents — powered by [Explorium](https://explorium.ai) and [Vibe Prospecting](https://vibeprospecting.ai).
 
 These skills are ready-to-use playbooks that let any AI coding assistant run real GTM workflows: use as a **prospecting skill** to build prospect lists, an **enrichment skill** to enrich company and contact data, a **lead scoring skill** to tier leads, or a complete **outbound skill** for cold email and ABM campaigns — without custom tooling or agencies.
 
 Free to install, use, and adapt under the MIT license.
 
 ```bash
-claude install explorium-ai/gtm-skills
+# Claude Code
+claude plugin marketplace add explorium-ai/gtm-skills
+claude plugin install explorium-public-skills@explorium-public-skills
+
+# Any other agent (Cursor, OpenCode, Windsurf, Cline, Goose, Kiro, ...)
+npx skills add explorium-ai/gtm-skills
 ```
+
+Codex, Cursor, Gemini CLI, GitHub Copilot and Grok have native installs too. See [Supported AI Agents & Platforms](#supported-ai-agents--platforms).
 
 ---
 
@@ -36,6 +43,9 @@ claude install explorium-ai/gtm-skills
 | [`market-sizing`](skills/market-sizing/SKILL.md) | Size TAM/SAM for any ICP against Explorium's 150M+ company dataset | market sizing, TAM, ICP filters |
 | [`meeting-prep`](skills/meeting-prep/SKILL.md) | 30-minute call briefs with prospect intelligence & talking points | meeting prep, call brief, account research |
 | [`clean-data`](skills/clean-data/SKILL.md) | Validate, deduplicate & entity-match B2B company and contact records | data cleaning, entity matching, deduplication, CRM enrichment |
+| [`hubspot-enrichment-scoring`](skills/hubspot-enrichment-scoring/SKILL.md) | Enrich HubSpot companies and write ICP fit scores and tiers back as custom properties | HubSpot enrichment, CRM enrichment, ICP scoring |
+| [`contact-research`](skills/contact-research/SKILL.md) | Enrich a list of people and write a professional synopsis for each | contact research, pre-call research, attendee profiles |
+| [`cold-email-lemlist`](skills/cold-email-lemlist/SKILL.md) | Build, enrich and personalize a prospect list, then push it to a live Lemlist campaign | cold email, Lemlist, outbound sequence |
 | [`abm-campaign`](skills/abm-campaign/SKILL.md) | End-to-end ABM: ICP → enrichment → LinkedIn Ads → monitoring | ABM campaign, account-based marketing, LinkedIn Ads |
 
 ---
@@ -58,18 +68,93 @@ claude install explorium-ai/gtm-skills
 
 ## Supported AI Agents & Platforms
 
-These skills work as Claude Code skills, Codex plugins, Grok skills, and GTM plugins for any AI agent that supports the `SKILL.md` Agent Skills format:
+Every skill lives once in `skills/<name>/SKILL.md`, in the open [Agent Skills](https://agentskills.io) format. Each tool gets a thin manifest on top (`.claude-plugin/`, `.cursor-plugin/`, `gemini-extension.json`), so all agents install the same skills. Where an agent supports plugins, the Vibe Prospecting MCP server is bundled in the same install.
 
-| Platform | Support | Install |
+| Platform | Install method | Vibe Prospecting MCP |
 |---|---|---|
-| **Claude Code** | Full support | `claude install explorium-ai/gtm-skills` |
-| **Codex** | Full support | Add as a Codex plugin |
-| **Grok Build** (Grok CLI) | Full support — zero config | Works as-is; see [Grok setup](#use-these-skills-in-grok) |
-| **Grok Bot** | Full support | Install as a skill/plugin from Marketplace |
-| **Hermes-Agent** | Full support | Add as a GTM plugin |
-| **OpenClaw** | Full support | Add as a GTM plugin |
-| **Claude Cowork** | Full support | Add as a GTM plugin |
-| **n8n** | Via MCP server | See [MCP Integration](#mcp-integration) |
+| **Claude Code** | Plugin marketplace | Bundled |
+| **Codex** | Plugin marketplace (reads `.claude-plugin/`) | Bundled |
+| **Cursor** | Plugin marketplace (`.cursor-plugin/`) | Bundled |
+| **Gemini CLI** | Extension (`gemini-extension.json`) | Bundled |
+| **GitHub Copilot** (CLI and VS Code) | Plugin marketplace (reads `.claude-plugin/`) | Bundled |
+| **Grok Build** | Plugin (reads `.claude-plugin/`) | Bundled |
+| **Claude Cowork** | Plugin marketplace | Bundled |
+| **Factory Droid** | Plugin marketplace (reads `.claude-plugin/`) | Bundled |
+| **OpenCode, Windsurf, Cline, Goose, Amp, Kiro, Roo Code, Hermes-Agent, OpenClaw** and 60+ more | [`npx skills`](https://github.com/vercel-labs/skills) | [Add it yourself](#mcp-integration) |
+| **Grok Bot** | Ask the Bot to save a skill; see [Grok Bot](#grok-bot) | Connect it yourself |
+| **n8n** | — | See [MCP Integration](#mcp-integration) |
+
+### Claude Code
+
+```bash
+claude plugin marketplace add explorium-ai/gtm-skills
+claude plugin install explorium-public-skills@explorium-public-skills
+```
+
+Inside a session you can do the same with `/plugin marketplace add explorium-ai/gtm-skills`.
+
+### Codex
+
+```bash
+codex plugin marketplace add explorium-ai/gtm-skills
+codex plugin add explorium-public-skills@explorium-public-skills
+```
+
+Start a new Codex session afterwards. `/plugins` in the TUI browses the same marketplace.
+
+### Cursor
+
+In Cursor, open **Customize**, choose **From GitHub Repository**, and paste `https://github.com/explorium-ai/gtm-skills`. From the CLI:
+
+```bash
+agent plugin marketplace add https://github.com/explorium-ai/gtm-skills
+```
+
+### Gemini CLI
+
+```bash
+gemini extensions install https://github.com/explorium-ai/gtm-skills
+```
+
+### GitHub Copilot
+
+```bash
+copilot plugin marketplace add explorium-ai/gtm-skills
+copilot plugin install explorium-public-skills@explorium-public-skills
+```
+
+In VS Code, run **Chat: Install Plugin From Source** and paste `https://github.com/explorium-ai/gtm-skills`.
+
+### Grok Build
+
+```bash
+grok plugin install explorium-ai/gtm-skills --trust
+```
+
+See [Use These Skills in Grok](#use-these-skills-in-grok) for other options and Grok Bot.
+
+### Claude Cowork
+
+**Customize → Plugins → Add marketplace**, then enter `explorium-ai/gtm-skills`.
+
+### Factory Droid
+
+```bash
+droid plugin marketplace add explorium-ai/gtm-skills
+droid plugin install explorium-public-skills@explorium-public-skills
+```
+
+### Any other agent
+
+The [`skills` CLI](https://github.com/vercel-labs/skills) installs `SKILL.md` skills into 70+ agents, including OpenCode, Windsurf, Cline, Goose, Amp, Kiro, Roo Code, Hermes-Agent and OpenClaw:
+
+```bash
+npx skills add explorium-ai/gtm-skills                         # choose agents interactively
+npx skills add explorium-ai/gtm-skills -a opencode -g          # one agent, user-wide
+npx skills add explorium-ai/gtm-skills --skill list-builder    # one skill only
+```
+
+This installs the skills only. Add the Vibe Prospecting MCP server to your agent as well; see [MCP Integration](#mcp-integration).
 
 ---
 
@@ -87,7 +172,14 @@ curl -fsSL https://x.ai/cli/install.sh | bash
 
 **Already using these skills in Claude Code?** You are done — Grok reads your existing Claude Code skills, plugins, marketplaces and MCP servers automatically. Run `grok inspect` to see them listed.
 
-**Installing standalone?** Clone the repo and point Grok's skill path at its `skills/` directory:
+**Installing standalone?** Install the repo as a Grok plugin. This brings in all the skills and the Vibe Prospecting MCP server:
+
+```bash
+grok plugin install explorium-ai/gtm-skills --trust
+grok inspect   # confirm the skills and MCP server were discovered
+```
+
+**Prefer plain skill folders?** Clone the repo and point Grok's skill path at its `skills/` directory:
 
 ```bash
 # 1. Clone anywhere you like
@@ -122,11 +214,26 @@ You can also wire up the underlying B2B data directly as an MCP server:
 grok mcp add --transport http vibe-prospecting https://vibeprospecting.explorium.ai/mcp
 ```
 
-(Run `grok mcp add --help` for the exact flags on your version, or add it to `~/.grok/config.toml` by hand — see [MCP Integration](#mcp-integration) for the server definition.)
+Or add it to `~/.grok/config.toml` by hand:
+
+```toml
+[mcp_servers.vibe-prospecting]
+url = "https://vibeprospecting.explorium.ai/mcp"
+```
+
+Run `grok inspect` to see every loaded MCP server and where it came from, or `grok mcp doctor` if the server isn't working.
 
 ### Grok Bot
 
-[Grok Bot](https://docs.x.ai/grok-bot/overview) gives you persistent AI teammates that run on a cloud computer with a browser, filesystem and terminal — a natural home for recurring GTM work. Install these skills from the **Marketplace** in the sidebar, then type `/` in the composer to reference a saved skill.
+[Grok Bot](https://docs.x.ai/grok-bot/overview) gives you persistent AI teammates that run on a cloud computer with a browser, filesystem and terminal — a natural home for recurring GTM work.
+
+These skills are not listed in the Grok Bot **Marketplace** yet. Grok Bot can [create a skill from written instructions](https://docs.x.ai/grok-bot/skills-routines-and-automations), and each `SKILL.md` here is exactly that, so ask your Bot to save one:
+
+```
+Clone https://github.com/explorium-ai/gtm-skills and save skills/list-builder/SKILL.md as a skill called "list-builder".
+```
+
+Then type `/` in the composer to reference the saved skill. If it doesn't appear, check **Marketplace → Your plugins → Manage plugins and skills → Private skills**. The skills call the Vibe Prospecting MCP server, so connect it to the Bot as well.
 
 Because Grok Bot also supports **routines** — a skill on a schedule — these skills fit recurring revenue workflows well:
 
@@ -141,8 +248,9 @@ Because Grok Bot also supports **routines** — a skill on a schedule — these 
 |---|---|---|
 | What it is | Agentic coding CLI in your terminal | Persistent AI teammates on a cloud computer |
 | Best for | Running GTM skills against your own repo, data and scripts | Scheduled, recurring GTM workflows and team-shared skills |
-| Skill format | `SKILL.md` — reads `.grok/skills/` **and** Claude Code skills | Saved skills + routines, installed via Marketplace |
-| Install these skills | Clone + `[skills] paths` in `~/.grok/config.toml` | Marketplace → Your plugins → Manage plugins and skills |
+| Skill format | `SKILL.md` — reads `.grok/skills/` **and** Claude Code skills | Saved (private) skills + routines |
+| Install these skills | `grok plugin install explorium-ai/gtm-skills --trust` | Ask the Bot to save each `SKILL.md` as a skill |
+
 ---
 
 ## GTM Use Cases
@@ -230,7 +338,7 @@ Use `personalize-email` to assemble intent-led signal packs for each prospect �
 `abm-campaign` orchestrates the full ABM workflow: ICP → Vibe Prospecting list → enrichment → score → personalized LinkedIn ad creatives → LinkedIn matched audience → daily campaign monitoring. No agency, no stitching tools together manually.
 
 ```
-/abm-diy-campaign Run an ABM campaign targeting 200 Series B fintech companies
+/abm-campaign Run an ABM campaign targeting 200 Series B fintech companies
 ```
 
 ---
@@ -252,7 +360,25 @@ The Vibe Prospecting MCP server is the data layer powering every skill in this r
 }
 ```
 
-Use this MCP server directly in Claude Code, Codex, Grok, Hermes-Agent, OpenClaw, or any agent that supports MCP for B2B data enrichment, prospecting, and GTM workflows — no SDK required.
+If you installed through a plugin or extension (see [Supported AI Agents & Platforms](#supported-ai-agents--platforms)), the server is already configured. Otherwise, add it to your agent:
+
+| Agent | Command or config |
+|---|---|
+| Claude Code | `claude mcp add --transport http vibe-prospecting https://vibeprospecting.explorium.ai/mcp` |
+| Codex | `codex mcp add vibe-prospecting --url https://vibeprospecting.explorium.ai/mcp` |
+| Grok Build | `grok mcp add --transport http vibe-prospecting https://vibeprospecting.explorium.ai/mcp` |
+| GitHub Copilot CLI | `copilot mcp add --transport http vibe-prospecting https://vibeprospecting.explorium.ai/mcp` |
+| Factory Droid | `droid mcp add vibe-prospecting https://vibeprospecting.explorium.ai/mcp --type http` |
+| Amp | `amp mcp add vibe-prospecting https://vibeprospecting.explorium.ai/mcp` |
+| Cursor | `~/.cursor/mcp.json`: `{"mcpServers": {"vibe-prospecting": {"url": "https://vibeprospecting.explorium.ai/mcp"}}}` |
+| VS Code | `.vscode/mcp.json`: `{"servers": {"vibe-prospecting": {"type": "http", "url": "https://vibeprospecting.explorium.ai/mcp"}}}` |
+| OpenCode | `opencode.json`: `{"mcp": {"vibe-prospecting": {"type": "remote", "url": "https://vibeprospecting.explorium.ai/mcp"}}}` |
+| Windsurf / Devin Desktop | `mcp_config.json`: `{"mcpServers": {"vibe-prospecting": {"serverUrl": "https://vibeprospecting.explorium.ai/mcp"}}}` |
+| Hermes-Agent | `~/.hermes/config.yaml`: `mcp_servers:` → `vibe-prospecting:` → `url: https://vibeprospecting.explorium.ai/mcp` |
+| Goose | `goose configure` → Add Extension → Remote Extension (Streamable HTTP) → `https://vibeprospecting.explorium.ai/mcp` |
+| Cline, Roo Code, Kiro, others | The `mcpServers` JSON above, in the agent's MCP settings file |
+
+The same server works in n8n or any other MCP client for B2B data enrichment, prospecting, and GTM workflows. No SDK is required.
 
 ---
 
@@ -281,13 +407,13 @@ For alternatives to **Cognism**, **Crustdata**, **People Data Labs**, **Lusha**,
 ## FAQ
 
 **Are there GTM or prospecting skills for Grok?**
-Yes. Every skill in this repo runs in Grok. [Grok Build](https://docs.x.ai/build/overview), xAI's agentic CLI, reads the `SKILL.md` Agent Skills format and is fully Claude Code compatible with zero configuration, so you can clone this repo into `~/.grok/skills/` and invoke any skill as a slash command. See [Use These Skills in Grok](#use-these-skills-in-grok).
+Yes. Every skill in this repo runs in Grok. [Grok Build](https://docs.x.ai/build/overview), xAI's agentic CLI, reads the `SKILL.md` Agent Skills format and is fully Claude Code compatible with zero configuration, so you can clone this repo, add its `skills/` directory to `[skills] paths` in `~/.grok/config.toml`, and invoke any skill as a slash command. See [Use These Skills in Grok](#use-these-skills-in-grok).
 
 **How do I add skills to Grok?**
-Clone the repo and add its `skills/` directory to `[skills] paths` in `~/.grok/config.toml`, then run `grok inspect` to confirm Grok discovered them. Grok also reads existing Claude Code skills, plugins, marketplaces and MCP servers automatically — no migration needed.
+Run `grok plugin install explorium-ai/gtm-skills --trust`, or clone the repo and add its `skills/` directory to `[skills] paths` in `~/.grok/config.toml`. Then run `grok inspect` to confirm Grok discovered them. Grok also reads existing Claude Code skills, plugins, marketplaces and MCP servers automatically — no migration needed.
 
 **Can Grok Bot do prospecting and lead enrichment?**
-Yes. Install these skills from the Grok Bot Marketplace and reference them with `/` in the composer. Because Grok Bot supports routines, you can schedule them — re-score accounts every Monday, enrich new CRM rows nightly, or generate call briefs each morning.
+Yes. Ask your Bot to save the `SKILL.md` files you need as skills (they are not in the Grok Bot Marketplace yet), then reference them with `/` in the composer. Because Grok Bot supports routines, you can schedule them — re-score accounts every Monday, enrich new CRM rows nightly, or generate call briefs each morning.
 
 **What's the difference between Grok Build and Grok Bot?**
 Grok Build is a coding CLI you run in your terminal against your own repo and data. Grok Bot is a persistent AI teammate on a cloud computer, better suited to recurring and team-shared workflows. Both run these skills.
@@ -302,18 +428,14 @@ The skills call the Vibe Prospecting MCP server for B2B data. See [MCP Integrati
 
 ## Installation
 
-```bash
-# Install all GTM skills (Claude Code)
-claude install explorium-ai/gtm-skills
+See [Supported AI Agents & Platforms](#supported-ai-agents--platforms) for the install command for your agent. Then invoke any skill by name:
 
-# Invoke any skill in a Claude Code session
+```
 /list-builder
 /enrich-company
 /account-fit-rank
-/abm-diy-campaign
+/abm-campaign
 ```
-
-For Codex, Grok, Hermes-Agent, OpenClaw, or Claude Cowork: add as a plugin from `https://github.com/explorium-ai/gtm-skills`.
 
 **Requirements:** [Vibe Prospecting](https://vibeprospecting.ai) account (free tier available). LinkedIn Ads API credentials required only for `abm-campaign`.
 
