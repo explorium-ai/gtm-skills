@@ -47,6 +47,8 @@ Codex, Cursor, Gemini CLI, GitHub Copilot and Grok have native installs too. See
 | [`contact-research`](skills/contact-research/SKILL.md) | Enrich a list of people and write a professional synopsis for each | contact research, pre-call research, attendee profiles |
 | [`cold-email-lemlist`](skills/cold-email-lemlist/SKILL.md) | Build, enrich and personalize a prospect list, then push it to a live Lemlist campaign | cold email, Lemlist, outbound sequence |
 | [`abm-campaign`](skills/abm-campaign/SKILL.md) | End-to-end ABM: ICP → enrichment → LinkedIn Ads → monitoring | ABM campaign, account-based marketing, LinkedIn Ads |
+| [`talent-sourcing`](skills/talent-sourcing/SKILL.md) | Turn a job description into a ranked, contactable pipeline of passive candidates | talent sourcing, recruiting, find candidates, talent pipeline |
+| [`talent-mapping`](skills/talent-mapping/SKILL.md) | Map the talent bench for a function across target or competitor companies, with movement signals | talent mapping, talent intelligence, market map, competitor talent |
 
 ---
 
@@ -331,6 +333,15 @@ Use `personalize-email` to assemble intent-led signal packs for each prospect �
 ```
 /account-research Give me a pre-call brief on Salesforce before my meeting Thursday
 /competitor-research Build a battlecard comparing HubSpot vs Salesforce for our sales team
+```
+
+### Talent Sourcing & Recruiting
+
+`talent-mapping` sizes the bench for a function across competitor or target companies and ranks them as talent sources using layoffs, leadership changes, and headcount trends. `talent-sourcing` then turns a job description into a ranked candidate pipeline with fit, movability, and reachability scores.
+
+```
+/talent-mapping Map the data engineering teams at Snowflake, Databricks, and Confluent
+/talent-sourcing Senior backend engineers, Go + Kafka, at Series B-D fintechs in Germany
 ```
 
 ### ABM Campaigns
