@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="GTM Skills by Explorium — prospecting, enrichment and outbound on autopilot" width="100%">
+  <img src="assets/banner.png" alt="GTM Skills by Explorium: turn Claude and Codex into GTM experts with 20+ skills for prospecting, enrichment, sequencing, cold outreach and account research" width="100%">
 </p>
 
 # GTM Skills for Claude Code, Codex, Cursor, Gemini, Grok & AI Agents
